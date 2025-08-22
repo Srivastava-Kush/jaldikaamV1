@@ -1,0 +1,6 @@
+/* small overrides for navbar internals */
+.nav-link { padding: 6px 8px; border-radius: 6px; }
+.nav-link:hover { background: #f3f4f6; }
+.dropdown-group h4 { margin: 0 0 8px 0; font-size: 14px; }
+.dropdown-group ul { list-style: none; padding: 0; margin: 0; }
+.dropdown-group li { margin-bottom: 6px; }
