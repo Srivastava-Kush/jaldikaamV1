@@ -1,0 +1,17 @@
+.CategoryGridItem {
+  display: block;
+  padding: 16px;
+  background: #fff;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #e6e9ee;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.CategoryGridItem:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #557af5;
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}

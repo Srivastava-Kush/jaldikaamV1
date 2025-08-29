@@ -23,11 +23,13 @@ export default function Navbar() {
           <div
             style={{ position: "relative" }}
             onMouseEnter={() => setServicesOpen(true)}
-            onMouseLeave={() => setServicesOpen(false)}
           >
             <button className="nav-link btn">Services ▾</button>
             {servicesOpen && (
-              <div className="dropdown-panel">
+              <div
+                className="dropdown-panel"
+                onMouseLeave={() => setServicesOpen(false)}
+              >
                 {categories.map((g) => (
                   <div key={g.group} className="dropdown-group">
                     <h4>{g.group}</h4>
