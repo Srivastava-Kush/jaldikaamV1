@@ -35,7 +35,7 @@ export default function Navbar() {
                     <h4>{g.group}</h4>
                     <ul>
                       {g.items.map((i) => (
-                        <li key={i.slug}>
+                        <li className="services-in-dropdown" key={i.slug}>
                           <Link to={`/search?category=${i.slug}`}>
                             {i.name}
                           </Link>
