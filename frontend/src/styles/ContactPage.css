@@ -1,0 +1,142 @@
+/* Container & layout */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5%;
+  box-sizing: border-box;
+}
+
+.contact-heading {
+  font-weight: 800; 
+  font-size: 1.875rem; 
+  margin: 0.5rem 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .contact-heading {
+    font-size: 2.25rem;
+  }
+}
+
+.contact-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+  box-sizing: border-box;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Card */
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #e5e7eb;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  .card {
+    width: 48%;
+  }
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: 40%;
+  }
+}
+
+.card-img {
+  width: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+/* Profile button */
+.profile-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 2rem;
+  overflow: hidden;
+  font-family: monospace;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  color: #ffffff;
+  background: #1f2937;
+  border-radius: 0.5rem;
+  z-index: 0;
+}
+
+@media (min-width: 768px) {
+  .profile-link {
+    padding: 1rem 2.5rem;
+  }
+}
+
+/* Expanding hover circle */
+.circle-expand {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-radius: 9999px;
+  transition: width 500ms ease-out, height 500ms ease-out;
+  z-index: 0;
+}
+
+/* Gradient overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 0.5rem;
+  margin-top: -0.25rem;
+  opacity: 0.3;
+  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,0.6));
+  z-index: 1;
+}
+
+/* Text label */
+.label {
+  position: relative;
+  z-index: 2;
+}
+
+.profile-link:hover .circle-expand {
+  width: 14rem;
+  height: 14rem;
+}
+
+/* Color variants */
+.profile-link.green .circle-expand {
+  background: #10b981;
+}
+
+.profile-link.blue .circle-expand {
+  background: #3b82f6;
+}
+
+/* Focus outline */
+.profile-link:focus {
+  outline: 3px solid rgba(59,130,246,0.3);
+  outline-offset: 2px;
+}
